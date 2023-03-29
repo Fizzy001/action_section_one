@@ -34,3 +34,12 @@ jobs:
       # this step runs a bash (Ubuntu's default shell) command
       - name: list files
         run: ls
+
+      - name: checkout code
+        run: actions/checkout@v3
+
+      - name: install pytest
+        run: pip install pytest
+
+      - name: run tests
+        run: python -m pytest -v
